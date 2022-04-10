@@ -2,21 +2,18 @@ import React, { useState } from 'react'
 
 export default function TextForm(props) {
     const handleUpClick = () => {
-        // console.log('uppercase was clicked' + text);
         let newText = text.toUpperCase();
         setText(newText);
         props.showAlert("Converted to Uppercase", "success");
     }
     
     const handleLoClick = () => {
-        // console.log('uppercase was clicked' + text);
         let newText = text.toLowerCase();
         setText(newText);
         props.showAlert("Converted to Lowercase", "success");
     }
 
     const handleClearClick = () => {
-        // console.log('uppercase was clicked' + text);
         let newText = '';
         setText(newText);
         props.showAlert("Text Cleared", "success");
@@ -46,8 +43,6 @@ export default function TextForm(props) {
      }
 
     const [text, setText] = useState('');
-    // text = "new text";      // wrong
-    // setText("new text");   // correct
     return (
         <>
             <div className="container" style={{color: props.mode==='dark'?'white':'black'}}>
