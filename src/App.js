@@ -6,10 +6,8 @@ import React, { useState } from 'react';
 import Alert from './components/Alert';
 import {
   BrowserRouter as Router,
-  // Switch,
   Routes,
   Route,
-  // Link
 } from "react-router-dom";
 
 function App() {
@@ -34,12 +32,6 @@ function App() {
       setMode('light');
       document.body.style.backgroundColor = 'white';
       showAlert("Light mode activated", "success");
-      // setInterval(() => {
-      //   document.title = 'TextUtils';
-      //   }, 1500);
-      // setInterval(() => {
-      //   document.title = 'Install';
-      //   }, 2000);
     }
   };
 
@@ -52,7 +44,7 @@ function App() {
       </div>
       <div className="container">
           <Routes>
-            <Route exact path="/about" element={<About />}>
+            <Route exact path="/about" element={<About mode={mode} />}>
             </Route>
             <Route exact path="/" element={<TextForm heading="Enter text to analyze"  mode={mode} showAlert={showAlert} />}>
             </Route>
