@@ -67,7 +67,7 @@ export default function TextForm(props) {
                 <p>{countWords(text)} words and {text.length} characters</p>
                 <p>{0.008 * countWords(text)} Minutes read</p>
                 <h2>Preview</h2>
-                <p>{text.length>0?text:"Start typing to preview"}</p>
+                <p>{text.length>0?text:"Nothing to preview"}</p>
             </div>
         </>
     )
