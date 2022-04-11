@@ -30,7 +30,7 @@ export default function TextForm(props) {
     }
 
     const handleCopy = () => {
-        navigator.clipboard.writeText(text.value);
+        navigator.clipboard.writeText(text);
         props.showAlert("Copied to clipboard", "success");
     }
 
